@@ -29,7 +29,7 @@ router.get('/add', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-
+    res.render('/details', {title: 'Add a book'})
 });
 
 // POST process the Book Details page and create a new Book - CREATE
@@ -38,6 +38,22 @@ router.post('/add', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
+    let newBook = book
+    ({
+      "Title": req.body.Title,
+      "Description": req.body.Description,
+      "Price": req.body.Price,
+      "Author": req.body.Author,
+      "Genre": req.body.Genre
+    });
+
+    book.create(newBook, (err, book) => {
+      if(err)
+      {
+        console.log(err);
+        res.end(err);
+      }
+    })
 
 });
 
