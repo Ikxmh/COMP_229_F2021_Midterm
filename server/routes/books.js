@@ -47,7 +47,8 @@ router.post('/details', (req, res, next) => {
       "Genre": req.body.Genre
     });
 
-    book.create(newBook, (err, book) => {
+    book.create(newBook, (err, book) => 
+    {
       if(err)
       {
         console.log(err);
@@ -67,11 +68,9 @@ router.get('/:id', (req, res, next) => {
     /*****************
      * ADD CODE HERE *
      *****************/
-
     let id = req.params.id;
 
     book.findById(id, (err, latestBookEditing) => {
-      {
         if(err)
         {
           console.log(err);
@@ -79,9 +78,8 @@ router.get('/:id', (req, res, next) => {
         }
         else
         {
-          res.render('books/details', {title: 'Modify Book', Books: latestBookEditing})
+          res.render('books/details', {title: 'Modify Book', books: latestBookEditing})
         }
-      }
     });
 });
 
