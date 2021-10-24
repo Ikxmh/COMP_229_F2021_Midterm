@@ -41,11 +41,11 @@ router.post('/details', (req, res, next) => {
      *****************/
     let newBook = book
     ({
-      "Title": req.body.Title,
-      "Description": req.body.Description,
-      "Price": req.body.Price,
-      "Author": req.body.Author,
-      "Genre": req.body.Genre
+      "Title": req.body.title,
+      "Description": req.body.description,
+      "Price": req.body.price,
+      "Author": req.body.author,
+      "Genre": req.body.genre
     });
 
     book.create(newBook, (err, book) => 
@@ -57,7 +57,7 @@ router.post('/details', (req, res, next) => {
       }
       else
       {
-        res.redirect('/books', {books: newBook});
+        res.redirect('/books');
       }
     });
 
@@ -93,11 +93,11 @@ router.post('/details/:id', (req, res, next) => {
  
     let modifiedBook = book({
       "_id": id,
-      "Title": req.body.Title,
-      "Description": req.body.Description,
-      "Price": req.body.Price,
-      "Author": req.body.Author,
-      "Genre": req.body.Genre
+      "Title": req.body.title,
+      "Description": req.body.description,
+      "Price": req.body.price,
+      "Author": req.body.author,
+      "Genre": req.body.genre
     });
 
     book.updateOne({_id: id}, modifiedBook,(err) => {
