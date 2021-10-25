@@ -45,17 +45,17 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "git+https://github.com/Ikxmh/COMP_229_F2021_Midterm.git"
   },
   "keywords": [
     "NodeJS",
     "ExpressJS",
     "EJS"
   ],
-  "author": "Your Name Goes Here",
+  "author": "Ikamjot Hundal",
   "license": "ISC",
   "bugs": {
-    "url": ""
+    "url": "https://github.com/Ikxmh/COMP_229_F2021_Midterm/issues"
   },
-  "homepage": ""
+  "homepage": "https://github.com/Ikxmh/COMP_229_F2021_Midterm#readme"
 }
