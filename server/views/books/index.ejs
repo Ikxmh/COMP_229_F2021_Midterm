@@ -1,5 +1,10 @@
 <% include ../partials/header.ejs %>
-
+<!--
+Filename: index.ejs
+  Author's name: Ikamjot Hundal
+  Student ID: 30114374
+  Web Name: COMP-229-F2021-Midterm-301134374 also known as BookList
+-->
     <!-- MAIN CONTENT -->
     <div class="container">
       <div class="row">
@@ -15,15 +20,17 @@
               <thead>
                 <tr>
                   <th>Title</th>
+                  <!--Columns Titles-->
                   <th class="text-center">Price</th>
                   <th class="text-center">Author</th>
                   <th class="text-center">Genre</th>
-                  <th class="text-center"></th>
-                  <th class="text-center"></th>
+                  <th class="text-center">Edit</th>
+                  <th class="text-center">Delete</th>
                 </tr>
                 </thead>
                 <tbody>
                 <!-- Template Row -->
+                <!-- Body of the books' content-->
                 <% for (let count = 0; count < books.length; count++) { %>
                 <tr>
                   <td><%= books[count].Title %></td>
@@ -31,18 +38,20 @@
                   <td class="text-center"><%= books[count].Author %></td>
                   <td class="text-center"><%= books[count].Genre %></td>
 
+
+                  <!--Buttons-->
                   <td class="text-center">
                     <!-- ------------------------ -->
                     <!-- ADD the EDIT BUTTON HERE -->
                     <!-- ------------------------ -->
-                    <a href="/books/details/<%= books[count]._id %> " class="btn btn-dark"><i class="fas fa-pen-square"></i> Edit </a>
+                    <a href="/books/details/<%= books[count]._id %>" class="btn btn-primary"><i class="fas fa-pen-square"></i> Edit </a>
                   </td>
 
                   <td class="text-center">
                     <!-- ------------------------ -->
                     <!-- ADD the DELETE BUTTON HERE -->
                     <!-- ------------------------ -->
-                    <a href="/books/delete/<%= books[count]._id %> " class="btn btn-dark"><i class="fas fa-pen-square"></i> Delete </a>
+                    <a href="/books/delete/<%= books[count]._id %>" class="btn btn-primary"><i class="fas fa-pen-square"></i> Delete </a>
                   </td>
                 </tr>
                 <% } %>

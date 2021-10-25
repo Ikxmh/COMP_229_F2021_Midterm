@@ -1,3 +1,10 @@
+/*
+Filename: book.js
+  Author's name: Ikamjot Hundal
+  Student ID: 30114374
+  Web Name: COMP-229-F2021-Midterm-301134374 also known as BookList
+*/
+
 // modules required for routing
 let express = require('express');
 let router = express.Router();
